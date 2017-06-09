@@ -21,7 +21,6 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
-            <!-- Run the application using "mvn embedded-glassfish:run" -->
             <plugin>
                 <groupId>org.glassfish</groupId>
                 <artifactId>maven-embedded-glassfish-plugin</artifactId>
