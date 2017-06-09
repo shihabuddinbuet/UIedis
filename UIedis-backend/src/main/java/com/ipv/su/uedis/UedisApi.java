@@ -17,4 +17,11 @@ public class UedisApi {
 		return Response.ok().build();
 	}
 	
+	@GET
+	@Path("/ping")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response ping() {
+		return Response.ok().build();
+	}
+	
 }
