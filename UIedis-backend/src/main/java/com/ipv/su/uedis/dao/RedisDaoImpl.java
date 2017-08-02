@@ -1,4 +1,4 @@
-package com.ipv.su.udedis.dao;
+package com.ipv.su.uedis.dao;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -6,11 +6,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.enterprise.context.ApplicationScoped;
+
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisCluster;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.Tuple;
 
+@ApplicationScoped
 public class RedisDaoImpl implements RedisDao{
 	private final String DEFAULT_PATTERN = "*";
 	private final JedisCluster connection = RedisManager.getConnection();
@@ -40,7 +43,7 @@ public class RedisDaoImpl implements RedisDao{
 	}
 
 	@Override
-	public String getValue(String key) {
+	public String getType(String key) {
 		String type = connection.type(key);
 		return type;
 	}
@@ -92,7 +95,7 @@ public class RedisDaoImpl implements RedisDao{
 	}
 
 	@Override
-	public Set<Tuple> getKeyValueByPattern(String pattern) {
+	public Set<Tuple> getValue(String pattern, String type) {
 		return null;
 	}
 	

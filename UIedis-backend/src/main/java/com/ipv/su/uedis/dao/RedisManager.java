@@ -1,4 +1,4 @@
-package com.ipv.su.udedis.dao;
+package com.ipv.su.uedis.dao;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -8,8 +8,8 @@ import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.JedisCluster;
 
 public class RedisManager {
-	private static final String HOST = "localhost";
-	private static final int PORT = 7000;
+	private static final String HOST = "192.168.0.102";
+	private static final int PORT = 8021;
 	
 	private static JedisCluster connection = null;
 	
